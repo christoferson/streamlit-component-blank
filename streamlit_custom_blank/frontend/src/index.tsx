@@ -1,11 +1,10 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import MyComponent from "./MyComponent"
-import CustomSlider from "./CustomSlider"
+import CustomComponent from "./CustomComponent"
 
 ReactDOM.render(
   <React.StrictMode>
-    <CustomSlider />
+    <CustomComponent />
   </React.StrictMode>,
   document.getElementById("root")
 )
