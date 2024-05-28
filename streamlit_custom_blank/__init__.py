@@ -76,6 +76,11 @@ def my_component(name, key=None):
     # There's no need to do this in our simple example - but it's an option.
     return component_value
 
+# Define a public function for the package,
+# which will wrap the caller to the frontend code
+def st_custom_slider():
+    component_value = _component_func()
+    return component_value
 
 # Add some test code to play with the component while it's in development.
 # During development, we can run this just as we would any other Streamlit
@@ -104,3 +109,7 @@ if not _RELEASE:
     name_input = st.text_input("Enter a name", value="Streamlit")
     num_clicks = my_component(name_input, key="foo")
     st.markdown("You've clicked %s times!" % int(num_clicks))
+
+    st.markdown("##### Code is from __init__.py if not _RELEASE")
+
+    st.divider()
